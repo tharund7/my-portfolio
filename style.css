@@ -382,6 +382,20 @@ section {
   margin-bottom: 50px;
   background-color: #E0F4FF;
 
+/* Add your existing styles here */
+
+.details-container {
+  margin-left: 50px;
+  margin-right: 0px;
+  background-color: #fbd8bb;
+  border-radius: 2rem;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+.details-container:hover {
+  transform: scale(1.05);
+}
 
 
 }
