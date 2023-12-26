@@ -95,7 +95,7 @@ a,
   padding: 6px 10px; /* Adjust the padding as needed */
   border-radius: 2rem;  /* Adjust the border-radius as needed */
   text-decoration: none;
-  color: #FF7A3F; /* Set the text color */
+  color: #FFF; /* Set the text color */
   background-color: #FF7A3F; /* Set the background color */
   transition: background-color 0.3s ease; /* Add a smooth transition effect */
 }
@@ -150,7 +150,7 @@ a {
 }
 #desktop-nav .logo:hover,
 #hamburger-nav .logo:hover {
-  color: #FFF; /* Change the color to your desired highlight color */
+  color: #FF7A3F; /* Change the color to your desired highlight color */
   text-decoration: underline;
   text-underline-offset: 1rem;
   text-decoration-color: rgb(181, 181, 181);
