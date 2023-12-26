@@ -167,7 +167,7 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.7); /* Set your desired background color and transparency level */
+   /* Set your desired background color and transparency level */
   z-index: 1000; /* Set a high z-index to ensure it appears above other elements */
   
 }
