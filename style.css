@@ -83,10 +83,8 @@ a,
 }
 
 
-/* ... (the rest of your CSS) ... */
 
-
-/* ... (the rest of your CSS) ... */
+/* Rest of your styles */
 
 
 /* Add this CSS to your stylesheet */
@@ -152,18 +150,28 @@ a {
 }
 #desktop-nav .logo:hover,
 #hamburger-nav .logo:hover {
-  color: #FF7A3F; /* Change the color to your desired highlight color */
+  color: #FFF; /* Change the color to your desired highlight color */
   text-decoration: underline;
   text-underline-offset: 1rem;
   text-decoration-color: rgb(181, 181, 181);
   cursor: pointer;
 }
 
+
+
 /* HAMBURGER MENU */
 
 #hamburger-nav {
   display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.7); /* Set your desired background color and transparency level */
+  z-index: 1000; /* Set a high z-index to ensure it appears above other elements */
+  
 }
+
 
 .hamburger-menu {
   position: relative;
