@@ -95,7 +95,7 @@ a,
   padding: 6px 10px; /* Adjust the padding as needed */
   border-radius: 2rem;  /* Adjust the border-radius as needed */
   text-decoration: none;
-  color: #FFF; /* Set the text color */
+  color: #fff; /* Set the text color */
   background-color: #FF7A3F; /* Set the background color */
   transition: background-color 0.3s ease; /* Add a smooth transition effect */
 }
@@ -115,6 +115,14 @@ nav,
   display: flex;
 }
 
+.nav-links {
+  margin-left: 50; /* This will push the navigation to the right */
+}
+
+.nav-links li {
+  margin-right: 0px; /* Adjust the right margin as needed */
+  display: inline-block; /* This makes the list items appear in a horizontal line */
+}
 nav {
   justify-content: space-around;
   align-items: center;
@@ -148,6 +156,7 @@ a {
 .logo {
   font-size: 2rem;
 }
+
 #desktop-nav .logo:hover,
 #hamburger-nav .logo:hover {
   color: #FF7A3F; /* Change the color to your desired highlight color */
@@ -167,7 +176,7 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-   /* Set your desired background color and transparency level */
+  background-color: rgba(255, 255, 255, 0.7); /* Set your desired background color and transparency level */
   z-index: 1000; /* Set a high z-index to ensure it appears above other elements */
   
 }
@@ -588,14 +597,18 @@ article .icon {
 
 /* FOOTER SECTION */
 
+/* FOOTER SECTION */
 footer {
-  height: 26vh;
+  height: 10vh; /* Adjust the height as needed */
   margin: 0 1rem;
 }
 
 footer p {
   text-align: center;
+  margin-top: 50px;
 }
+
+
 
 
 /* TO FIX RIGHT-SIDE WHITESPACE PROBLEM */
