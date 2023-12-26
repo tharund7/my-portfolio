@@ -11,6 +11,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <!-- Add this inside the head section of your HTML -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
   </head>
   <body>
     <nav id="desktop-nav">
@@ -182,7 +185,7 @@
                   <br />
                   <i class="fa-sharp fa-solid fa-star-of-life fa-2xs"></i> Implemented automated testing suites using JUnit 
                   and Jasmine for back-end and front-end components, respectively, to maintain
-                  code integrity and reliability. 
+                  code integrity and reliability.
                   <br />
                   <br />
                 </p>
@@ -199,90 +202,166 @@
     </section>
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-1.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project One</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/tharund7/Project1'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://tharund7.github.io/Project1/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-2.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Two</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/tharund7/Project3'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://tharund7.github.io/Project2/'"
-              >
-                Live Demo
-              </button>
+      <h1 class="title project-title-gap">Projects</h1>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <!-- Project One -->
+          <div class="swiper-slide">
+            <div class="details-container color-container">
+              <!-- Project content goes here -->
+              <div class="article-container">
+                  <img
+                    src="./assets/project-1.png"
+                    alt="Project 1"
+                    class="project-img"
+                  />
+                </div>
+                <h2 class="experience-sub-title project-title">Project One</h2>
+                <div class="btn-container">
+                  <button
+                    class="btn btn-color-2 project-btn"
+                    onclick="location.href='https://github.com/tharund7/Project1'"
+                  >
+                    Github
+                  </button>
+                  <button
+                    class="btn btn-color-2 project-btn"
+                    onclick="location.href='https://tharund7.github.io/Project1/'"
+                  >
+                    Live Demo
+                  </button>
+                </div>
             </div>
           </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
+
+                   <!-- Project Two -->
+                   <div class="swiper-slide">
+                    <div class="details-container color-container">
+                      <!-- Project content goes here -->
+                      <div class="article-container">
+                          <img
+                            src="./assets/project-2.png"
+                            alt="Project 2"
+                            class="project-img"
+                          />
+                        </div>
+                        <h2 class="experience-sub-title project-title">Project Two</h2>
+                        <div class="btn-container">
+                          <button
+                            class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com/tharund7/Project2'"
+                          >
+                            Github
+                          </button>
+                          <button
+                            class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://tharund7.github.io/Project2/'"
+                          >
+                            Live Demo
+                          </button>
+                        </div>
+                    </div>
+                  </div>
+    
+          <!-- Project Three -->
+          <div class="swiper-slide">
+            <div class="details-container color-container">
+              <!-- Project content goes here -->
+              <div class="article-container">
+                  <img
+                    src="./assets/project-3.png"
+                    alt="Project 3"
+                    class="project-img"
+                  />
+                </div>
+                <h2 class="experience-sub-title project-title">Project Three</h2>
+                <div class="btn-container">
+                  <button
+                    class="btn btn-color-2 project-btn"
+                    onclick="location.href='https://github.com/tharund7/Project3'"
+                  >
+                    Github
+                  </button>
+                  <button
+                    class="btn btn-color-2 project-btn"
+                    onclick="location.href='https://tharund7.github.io/Project2/'"
+                  >
+                    Live Demo
+                  </button>
+                </div>
             </div>
-            <h2 class="experience-sub-title project-title">Project Three</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/tharund7/Project3'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://tharund7.github.io/Project3/'"
-              >
-                Live Demo
-              </button>
+          </div>
+          <!-- Project 4 -->
+          <div class="swiper-slide">
+            <div class="details-container color-container">
+              <!-- Project content goes here -->
+              <div class="article-container">
+                  <img
+                    src="./assets/project-4.png"
+                    alt="Project 3"
+                    class="project-img"
+                  />
+                </div>
+                <h2 class="experience-sub-title project-title">Project Three</h2>
+                <div class="btn-container">
+                  <button
+                    class="btn btn-color-2 project-btn"
+                    onclick="location.href='https://github.com/tharund7/Project4'"
+                  >
+                    Github
+                  </button>
+                  <button
+                    class="btn btn-color-2 project-btn"
+                    onclick="location.href='https://tharund7.github.io/project-4/'"
+                  >
+                    Live Demo
+                  </button>
+                </div>
             </div>
+          </div>
+          
+    
+          <!-- Project Five  -->
+          <div class="swiper-slide">
+            <div class="details-container color-container">
+              <!-- Project content goes here -->
+              <div class="article-container">
+                  <img
+                    src="./assets/project-5.png"
+                    alt="Project 5"
+                    class="project-img"
+                  />
+                </div>
+                <h2 class="experience-sub-title project-title">Project </h2>
+                <div class="btn-container">
+                  <button
+                    class="btn btn-color-2 project-btn"
+                    onclick="location.href='https://github.com/tharund7/Fitness-Nutrition'"
+                  >
+                    Github
+                  </button>
+                  <button
+                    class="btn btn-color-2 project-btn"
+                    onclick="location.href='https://tharund7.github.io/Fitness-Nutrition/'"
+                  >
+                    Live Demo
+                  </button>
+                </div>
+            </div>
+            
           </div>
         </div>
+    
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
+    
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
     </section>
+    
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
@@ -320,4 +399,48 @@
     </footer>
     <script src="script.js"></script>
   </body>
+<!-- Add this just before the closing body tag -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var mySwiper = new Swiper('.swiper-container', {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    loop: true,
+    slidesPerView: 'auto',
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 300, // Adjust the depth value
+      modifier: 3, // Adjust the modifier value
+      slideShadows: false, // Disable slide shadows
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    on: {
+      init: function () {
+        this.pagination.$el.addClass('custom-pagination');
+      },
+    },
+  });
+});
+
+
+
+
+</script>
+
+
+  
 </html>
