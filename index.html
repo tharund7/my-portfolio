@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <!-- Add this inside the head section of your HTML -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<style>
+  #desktop-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7); /* Set your initial background color and transparency level */
+    z-index: 1000; /* Set a high z-index to ensure it appears above other elements */
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+  }
+
+  #desktop-nav.transparent {
+    background-color: rgba(255, 255, 255, 0) !important; /* Make it fully transparent when scrolled */
+  }
+</style>
+<script>
+  $(document).ready(function () {
+    var desktopNav = $("#desktop-nav");
+
+    $(window).scroll(function () {
+      var scrollPosition = $(this).scrollTop();
+      var maxOpacity = 0.7; // Set your initial transparency level here
+
+      // Calculate the transparency based on scroll position
+      var currentOpacity = maxOpacity - (scrollPosition / 300); // Adjust the divisor as needed
+
+      // Ensure the transparency stays within the valid range
+      currentOpacity = Math.max(0, Math.min(maxOpacity, currentOpacity));
+
+      // Apply the updated transparency
+      desktopNav.css('background-color', 'rgba(255, 255, 255, ' + currentOpacity + ')');
+
+      // Add or remove the 'transparent' class based on the scroll position
+      if (scrollPosition > 0) {
+        desktopNav.addClass("transparent");
+      } else {
+        desktopNav.removeClass("transparent");
+      }
+    });
+  });
+</script>
+
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo-container">
+        <div class="logo">Tharun Derangula</div>
+      </div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Tharun Derangula</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container fadeInAnimation">
+        <img src="./assets/profile-pic.png" alt="Tharun Derangula profile picture" />
+      </div>
+      
+      <div class="section__text">
+        <p class="section__text__p1" style="color: #fff;">Hello, I'm</p>
+        <h1 class="title">Tharun Derangula</h1>
+        <p class="section__text__p2" style="color: #fff;">Graduate Research Assistant,<br> Illinois Institute of Technology, Chicago</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/THARUN-DERANGULA-RESUME.pdf')"
+          >
+          <span style="color: black;">Download CV</span>
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin1.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/tharunderangula/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/tharund7'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container"style="margin-left: 100px;margin: right 0;px;">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>Present<br />Graduate Research Assistant, Illinois Institute of Technology</p>
+              <p>8 Months <br />Software Developer Intern, Walmart Global Tech India</p>
+            </div>
+            <div class="details-container"style="margin-left: 0px;margin-right: 100px;">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>Master of Science in Information Technology<br />Bachelor in Computer Science and Engineering</p>
+            </div>
+          </div>
+          <div class="text-container" style="text-align: left; margin-left: 100px; margin-right: 100px; ">
+            <p style="color: black; font-size: 20px;">
+                Tharun Derangula: Aspiring software engineer with a passion for building intuitive and user-centric applications.
+                Masters in Computer Science student at Kennesaw State University, boasting a perfect 4.0 GPA.
+                Skilled in a wide range of front-end and back-end technologies like React, Angular, Java, Spring Boot, and AWS.
+                Proven experience in research, development, and testing through internships at Walmart Global Tech India and academic projects like Travel Buddy and Recipe Prediction System.
+                Eager to leverage strong technical expertise, problem-solving skills, and leadership experience to contribute to innovative projects and make a positive impact in the tech industry.
+            </p>
+        </div>
+        </div>
+      </div>
+
+    </section>
+    
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container"style="margin-left:50px px;margin-right:0px;margin-left: 50px; background-color:#fbd8bb ">
+              <h2 class="experience-sub-title1"style="margin: left 50px;0px px;margin-right:0px;">Graduate Research Assistant</h2><br /><br />
+              <div class="article-container">
+                <div class="container-fluid">
+                  <h2><i class="fa-solid fa-briefcase"></i></h2>
+                  <h5>
+                    <i class="square-icon fa-solid fa-square fa-2xs"></i> Illinois Institute of Technology, 
+                    <i class="square-icon fa-solid fa-square fa-2xs"></i> Chicago, IL -
+                    <i class="square-icon fa-solid fa-square fa-2xs"></i> August 2023 – Present
+                  </h5>
+                  <p>
+                    <i class="fa-sharp fa-solid fa-star-of-life fa-2xs"></i> Technology Stack: HTML5, CSS3, Bootstrap, 
+                    JavaScript, React JS, SQL, bootstrap <br /><br />
+                    <i class="fa-sharp fa-solid fa-star-of-life fa-2xs"></i> Enhanced a responsive web application using React JS and Bootstrap. <br />
+                    <br /><i class="fa-sharp fa-solid fa-star-of-life fa-2xs"></i>
+                    spearheaded extensive research on front-end technologies and best practices, applying this knowledge to enhance the user
+                    interface and user experience of the AIM Portal of Access and accommodation center. <br />
+                    <br />
+                    <i class="fa-sharp fa-solid fa-star-of-life fa-2xs"></i>Created new features and functionalities along with performing
+                    bug fixes and increased user engagement by 15%.
+                    <br />
+                    <br />
+                    
+                  </p>
+                </div>
+              
+            </div>
+          </div>
+          <div class="details-container" style="margin-left: 0px;margin-right: 50px; background-color: #E8F3D6;" >
+            <h2 class="experience-sub-title1" style="margin-left: 0px;margin-right: 50px;">Software Developer Intern</h2><br /><br />
+            <div class="article-container">
+              <div class="container-fluid">
+                <h2><i class="fa-solid fa-briefcase"></i></h2>
+                <h5>
+                  <i class="square-icon fa-solid fa-square fa-2xs"></i> Walmart Global Tech India,
+                  <i class="square-icon fa-solid fa-square fa-2xs"></i> Bangalore, India -
+                  <i class="square-icon fa-solid fa-square fa-2xs"></i> Feb 2022 -
+                  September 2022
+                </h5>
+                <p>
+                  <i class="fa-sharp fa-solid fa-star-of-life fa-2xs"></i> Technology Stack: java, React, Angular, Bootstrap, 
+                  Spring Boot, REST API, Nodejs, Typescript, CSS, <br /><br />
+                  <i class="fa-sharp fa-solid fa-star-of-life fa-2xs"></i> Contributed to the development of a web application
+                  using Angular, gaining proficiency in front-end technologies and UI
+                  development and developed 10+ reusable UI components. Gained exposure to responsive UI development 
+                  using Angular Material for improved user interface design. <br />
+                  <br />
+                  <i class="fa-sharp fa-solid fa-star-of-life fa-2xs"></i> Designed and implemented responsive UI 
+                  components using Angular Material, ensuring a consistent and visually appealing user
+                  interface across various devices and screen sizes.
+                  <br />
+                  <br />
+                  <i class="fa-sharp fa-solid fa-star-of-life fa-2xs"></i> Assisted in building the back-end infrastructure with
+                  Java and Spring Boot, learning core principles of server-side development.
+                  <br />
+                  <br />
+                  <i class="fa-sharp fa-solid fa-star-of-life fa-2xs"></i> Implemented automated testing suites using JUnit 
+                  and Jasmine for back-end and front-end components, respectively, to maintain
+                  code integrity and reliability.
+                  <br />
+                  <br />
+                </p>
+              </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title project-title-gap">Projects</h1>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <!-- Project One -->
+          <div class="swiper-slide">
+            <div class="details-container color-container">
+              <!-- Project content goes here -->
+              <div class="article-container">
+                  <img
+                    src="./assets/project-1.png"
+                    alt="Project 1"
+                    class="project-img"
+                  />
+                </div>
+                <h2 class="experience-sub-title project-title">Project One</h2>
+                <div class="btn-container">
+                  <button
+                    class="btn btn-color-2 project-btn"
+                    onclick="location.href='https://github.com/tharund7/Project1'"
+                  >
+                    Github
+                  </button>
+                  <button
+                    class="btn btn-color-2 project-btn"
+                    onclick="location.href='https://tharund7.github.io/Project1/'"
+                  >
+                    Live Demo
+                  </button>
+                </div>
+            </div>
+          </div>
+
+                   <!-- Project Two -->
+                   <div class="swiper-slide">
+                    <div class="details-container color-container">
+                      <!-- Project content goes here -->
+                      <div class="article-container">
+                          <img
+                            src="./assets/project-2.png"
+                            alt="Project 2"
+                            class="project-img"
+                          />
+                        </div>
+                        <h2 class="experience-sub-title project-title">Project Two</h2>
+                        <div class="btn-container">
+                          <button
+                            class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com/tharund7/Project2'"
+                          >
+                            Github
+                          </button>
+                          <button
+                            class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://tharund7.github.io/Project2/'"
+                          >
+                            Live Demo
+                          </button>
+                        </div>
+                    </div>
+                  </div>
+    
+          <!-- Project Three -->
+          <div class="swiper-slide">
+            <div class="details-container color-container">
+              <!-- Project content goes here -->
+              <div class="article-container">
+                  <img
+                    src="./assets/project-3.png"
+                    alt="Project 3"
+                    class="project-img"
+                  />
+                </div>
+                <h2 class="experience-sub-title project-title">Project Three</h2>
+                <div class="btn-container">
+                  <button
+                    class="btn btn-color-2 project-btn"
+                    onclick="location.href='https://github.com/tharund7/Project3'"
+                  >
+                    Github
+                  </button>
+                  <button
+                    class="btn btn-color-2 project-btn"
+                    onclick="location.href='https://tharund7.github.io/Project2/'"
+                  >
+                    Live Demo
+                  </button>
+                </div>
+            </div>
+          </div>
+          <!-- Project 4 -->
+          <div class="swiper-slide">
+            <div class="details-container color-container">
+              <!-- Project content goes here -->
+              <div class="article-container">
+                  <img
+                    src="./assets/project-4.png"
+                    alt="Project 3"
+                    class="project-img"
+                  />
+                </div>
+                <h2 class="experience-sub-title project-title">Project Three</h2>
+                <div class="btn-container">
+                  <button
+                    class="btn btn-color-2 project-btn"
+                    onclick="location.href='https://github.com/tharund7/Project4'"
+                  >
+                    Github
+                  </button>
+                  <button
+                    class="btn btn-color-2 project-btn"
+                    onclick="location.href='https://tharund7.github.io/project-4/'"
+                  >
+                    Live Demo
+                  </button>
+                </div>
+            </div>
+          </div>
+          
+    
+          <!-- Project Five  -->
+          <div class="swiper-slide">
+            <div class="details-container color-container">
+              <!-- Project content goes here -->
+              <div class="article-container">
+                  <img
+                    src="./assets/project-5.png"
+                    alt="Project 5"
+                    class="project-img"
+                  />
+                </div>
+                <h2 class="experience-sub-title project-title">Project Five</h2>
+                <div class="btn-container">
+                  <button
+                    class="btn btn-color-2 project-btn"
+                    onclick="location.href='https://github.com/tharund7/Fitness-Nutrition'"
+                  >
+                    Github
+                  </button>
+                  <button
+                    class="btn btn-color-2 project-btn"
+                    onclick="location.href='https://tharund7.github.io/Fitness-Nutrition/'"
+                  >
+                    Live Demo
+                  </button>
+                </div>
+            </div>
+            
+          </div>
+        </div>
+    
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    
+    </section>
+    
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:tharunderangula07@gmail.com">tharunderangula07@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin1.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/tharunderangula/">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="c">
+      <p >Copyright &#169; 2023 Tharun D. All Rights Reserved.</p>
+    </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+<!-- Add this just before the closing body tag -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var mySwiper = new Swiper('.swiper-container', {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    loop: true,
+    slidesPerView: 'auto',
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 300, // Adjust the depth value
+      modifier: 3, // Adjust the modifier value
+      slideShadows: false, // Disable slide shadows
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    on: {
+      init: function () {
+        this.pagination.$el.addClass('custom-pagination');
+      },
+    },
+  });
+});
+
+
+
+
+</script>
+
+
+  
+</html>
