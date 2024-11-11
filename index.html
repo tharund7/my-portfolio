@@ -17,15 +17,16 @@
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <style>
   #desktop-nav {
-    position: absolute; /* Set as absolute so it doesn’t remain fixed */
+    position: fixed; /* Keep the navbar fixed */
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.7); /* Set initial background color and transparency */
-    z-index: 1000; /* High z-index to ensure it appears above other elements */
-    transition: top 0.3s ease, background-color 0.3s ease; /* Transition for hiding effect and background */
+    background-color: rgba(255, 255, 255, 0.7); /* Initial background color and transparency */
+    z-index: 1000;
+    transition: top 0.3s ease, background-color 0.3s ease; /* Smooth transition for hiding and background */
   }
 </style>
+
 <script>
   $(document).ready(function () {
     var desktopNav = $("#desktop-nav");
@@ -34,26 +35,28 @@
     $(window).scroll(function () {
       var scrollTop = $(this).scrollTop();
 
-      // Show or hide navbar based on scroll direction
+      // Determine scroll direction and show/hide navbar
       if (scrollTop > lastScrollTop) {
         // Scroll down - hide navbar
-        desktopNav.css('top', '-80px'); // Adjust to navbar height
+        desktopNav.css('top', '-80px'); // Adjust -80px to match the navbar height
       } else {
         // Scroll up - show navbar
         desktopNav.css('top', '0');
       }
 
+      // Store the new scroll position for next scroll event
       lastScrollTop = scrollTop;
 
-      // Update transparency based on scroll position
+      // Adjust background opacity based on scroll position
       var maxOpacity = 0.7;
       var currentOpacity = maxOpacity - (scrollTop / 300);
       currentOpacity = Math.max(0, Math.min(maxOpacity, currentOpacity));
-
+      
       desktopNav.css('background-color', 'rgba(255, 255, 255, ' + currentOpacity + ')');
     });
   });
 </script>
+
 
 
   </head>
